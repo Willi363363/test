@@ -210,29 +210,31 @@ const PiscineReview = () => {
       title: "Formats implémentés",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title text-blue animate-slideInLeft">Les 11 formats de my_printf</h2>
-
-          <div className="grid grid-3">
+          <h2 className="section-title">Les 11 formats de my_printf</h2>
+          <div className="format-grid">
             {[
-              { format: "%c", desc: "Caractère", example: "'A'", color: "blue" },
-              { format: "%s", desc: "Chaîne", example: '"Epitech"', color: "purple" },
-              { format: "%i / %d", desc: "Entier", example: "42", color: "green" },
-              { format: "%u", desc: "Unsigned", example: "4294967295", color: "yellow" },
-              { format: "%f", desc: "Flottant", example: "3.141593", color: "orange" },
-              { format: "%e / %E", desc: "Scientifique", example: "1.23e+02", color: "red" },
-              { format: "%x / %X", desc: "Hexadécimal", example: "0xff / 0xFF", color: "pink" },
-              { format: "%o", desc: "Octal", example: "755", color: "indigo" },
-              { format: "%p", desc: "Pointeur", example: "0x7fff5...", color: "cyan" },
-              { format: "%%", desc: "Pourcent", example: "'%'", color: "gray" }
+              { format: "%c", desc: "Caractère", example: "'A'" },
+              { format: "%s", desc: "Chaîne", example: '"Hello"' },
+              { format: "%d", desc: "Entier", example: "-42" },
+              { format: "%i", desc: "Entier", example: "42" },
+              { format: "%u", desc: "Unsigned", example: "4294967295" },
+              { format: "%f", desc: "Flottant", example: "3.141593" },
+              { format: "%e", desc: "Scientifique", example: "1.23e+02" },
+              { format: "%E", desc: "Scientifique", example: "1.23E+02" },
+              { format: "%x", desc: "Hexadécimal", example: "0xff" },
+              { format: "%X", desc: "Hexadécimal", example: "0xFF" },
+              { format: "%o", desc: "Octal", example: "0755" },
+              { format: "%p", desc: "Pointeur", example: "0x7fff5..." },
+              { format: "%%", desc: "Pourcent", example: "%" }
             ].map((item, idx) => (
               <div
                 key={idx}
-                className={`format-card format-${item.color} animate-slideInUp hover-zoom rotate-2`}
+                className="format-card animate-slideInUp"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
-                <h3 className={`format-title text-${item.color}`}>{item.format}</h3>
-                <p className="text-muted mb-xs">{item.desc}</p>
-                <p className="code-chip">{item.example}</p>
+                <h3 className="format-title">{item.format}</h3>
+                <p className="format-desc">{item.desc}</p>
+                <code className="format-example">{item.example}</code>
               </div>
             ))}
           </div>

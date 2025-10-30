@@ -382,3 +382,48 @@ body, .app-root {
   margin-top: 3rem;
 }
 
+/* === FORMAT CARDS === */
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.format-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.format-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+}
+
+.format-title {
+  font-size: 2rem;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #818cf8;
+}
+
+.format-desc {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.format-example {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  color: #60a5fa;
+}
+
