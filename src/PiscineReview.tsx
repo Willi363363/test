@@ -509,7 +509,7 @@ const PiscineReview = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -518,8 +518,8 @@ const PiscineReview = () => {
           to {
             opacity: 1;
             transform: translateY(0);
-          }
-        }
+          '}
+        <style>}
         
         @keyframes slideInLeft {
           from {
