@@ -432,7 +432,7 @@ const PiscineReview = () => {
     }
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
