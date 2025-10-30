@@ -23,17 +23,20 @@ const PiscineReview = () => {
       title: "Review Piscine Partie 2",
       subtitle: "My_printf",
       content: (
-        <div className="section section-center animate-fadeIn" style={{position: "relative"}}>
-          <h1 className="title-xxl text-gradient pulse" style={{position: "relative", zIndex: 2}}>Review Piscine Partie 2</h1>
-          <div className="title-glow pulse" style={{position: "absolute", left: 0, right: 0, top: 0, bottom: 0, zIndex: 1}} />
-          <h2 className="subtitle-xl animate-slideInUp">Reproduction complète de printf en C</h2>
-          <div className="author-block animate-slideInUp" style={{ animationDelay: '0.2s', marginTop: "2rem" }}>
-            <p className="author-name" style={{color: "#60a5fa", fontWeight: "bold", fontSize: "1.3rem"}}>ROUVIERE William</p>
-            <p className="author-school" style={{color: "#b0b3c6", fontSize: "1.1rem"}}>Epitech Montpellier - 1ère année</p>
-            <div className="icon-row" style={{display: "flex", justifyContent: "center", gap: "2rem", marginTop: "1.5rem"}}>
-              <Code className="icon-xxl icon-blue bounce" />
-              <Terminal className="icon-xxl icon-purple bounce" style={{animationDelay: "0.2s"}} />
-              <Cpu className="icon-xxl icon-pink bounce" style={{animationDelay: "0.4s"}} />
+        <div className="section-center animate-fadeIn">
+          <h1 className="title-xxl">Review Piscine Partie 2</h1>
+          <h2 className="subtitle-xl">Reproduction complète de printf en C</h2>
+          <div className="author-section" style={{marginTop: "3rem", textAlign: "center"}}>
+            <p className="author-name" style={{color: "#818cf8", fontSize: "1.5rem", marginBottom: "0.5rem"}}>
+              ROUVIERE William
+            </p>
+            <p className="author-school" style={{color: "#94a3b8", fontSize: "1.2rem"}}>
+              Epitech Montpellier - 1ère année
+            </p>
+            <div className="icon-group" style={{marginTop: "2rem", display: "flex", justifyContent: "center", gap: "2rem"}}>
+              <Code className="icon-lg" style={{color: "#818cf8"}} />
+              <Terminal className="icon-lg" style={{color: "#8b5cf6"}} />
+              <Cpu className="icon-lg" style={{color: "#a78bfa"}} />
             </div>
           </div>
         </div>
