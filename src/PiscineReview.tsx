@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Code, CheckCircle, AlertCircle, Target, TrendingUp, Terminal, Cpu, Zap, Database, GitBranch, Award } from 'lucide-react';
+import './PiscineReview.css';
 
 const PiscineReview = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -508,84 +509,6 @@ const PiscineReview = () => {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          '}
-        <style>}
-        
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slideInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes scaleIn {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        
-        .animate-fadeIn {
-          animation: fadeIn 0.6s ease-out;
-        }
-        
-        .animate-slideInLeft {
-          animation: slideInLeft 0.6s ease-out;
-        }
-        
-        .animate-slideInRight {
-          animation: slideInRight 0.6s ease-out;
-        }
-        
-        .animate-slideInUp {
-          animation: slideInUp 0.6s ease-out;
-          animation-fill-mode: both;
-        }
-        
-        .animate-scaleIn {
-          animation: scaleIn 0.6s ease-out;
-        }
-      `}</style>
     </div>
   );
 };
