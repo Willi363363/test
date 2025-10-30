@@ -23,19 +23,17 @@ const PiscineReview = () => {
       title: "Review Piscine Partie 2",
       subtitle: "My_printf",
       content: (
-        <div className="section section-center animate-fadeIn">
-          <div className="hero-headline">
-            <h1 className="title-xxl text-gradient pulse">Review Piscine Partie 2</h1>
-            <div className="title-glow pulse" />
-          </div>
-          <h2 className="subtitle-xl text-muted animate-slideInUp">Reproduction complète de printf en C</h2>
-          <div className="author-block animate-slideInUp" style={{ animationDelay: '0.2s' }}>
-            <p className="author-name text-accent">ROUVIERE William</p>
-            <p className="author-school text-faint">Epitech Montpellier - 1ère année</p>
-            <div className="icon-row">
+        <div className="section section-center animate-fadeIn" style={{position: "relative"}}>
+          <h1 className="title-xxl text-gradient pulse" style={{position: "relative", zIndex: 2}}>Review Piscine Partie 2</h1>
+          <div className="title-glow pulse" style={{position: "absolute", left: 0, right: 0, top: 0, bottom: 0, zIndex: 1}} />
+          <h2 className="subtitle-xl animate-slideInUp">Reproduction complète de printf en C</h2>
+          <div className="author-block animate-slideInUp" style={{ animationDelay: '0.2s', marginTop: "2rem" }}>
+            <p className="author-name" style={{color: "#60a5fa", fontWeight: "bold", fontSize: "1.3rem"}}>ROUVIERE William</p>
+            <p className="author-school" style={{color: "#b0b3c6", fontSize: "1.1rem"}}>Epitech Montpellier - 1ère année</p>
+            <div className="icon-row" style={{display: "flex", justifyContent: "center", gap: "2rem", marginTop: "1.5rem"}}>
               <Code className="icon-xxl icon-blue bounce" />
-              <Terminal className="icon-xxl icon-purple bounce delay-1" />
-              <Cpu className="icon-xxl icon-pink bounce delay-2" />
+              <Terminal className="icon-xxl icon-purple bounce" style={{animationDelay: "0.2s"}} />
+              <Cpu className="icon-xxl icon-pink bounce" style={{animationDelay: "0.4s"}} />
             </div>
           </div>
         </div>

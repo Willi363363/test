@@ -1,6 +1,6 @@
 .main-bg {
   min-height: 100vh;
-  background: radial-gradient(ellipse at 60% 40%, #2e3192 0%, #1bffff 40%, #ff00cc 100%);
+  background: radial-gradient(ellipse at 60% 40%, #232b5d 0%, #2e3192 40%, #8e44ad 100%);
   color: #fff;
   padding: 32px;
   font-family: 'Inter', Arial, sans-serif;
@@ -13,9 +13,9 @@
 }
 
 .slide-box {
-  background: rgba(20, 30, 60, 0.85);
+  background: rgba(20, 30, 60, 0.92);
   border-radius: 24px;
-  box-shadow: 0 0 40px 10px #8e44ad55, 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 0 40px 10px #2e3192cc, 0 8px 32px rgba(0,0,0,0.4);
   padding: 48px;
   margin-bottom: 32px;
   min-height: 650px;
@@ -33,12 +33,12 @@
 }
 
 .title-main {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #1bffff 10%, #8e44ad 60%, #ff00cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 24px #ff00cc88, 0 2px 8px #1bffff88;
+  text-shadow: 0 0 24px #8e44ad88, 0 2px 8px #1bffff88;
   animation: pulse 1.5s infinite;
   position: relative;
   z-index: 2;
@@ -55,7 +55,7 @@
 }
 
 .subtitle {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   color: #e0e0e0;
   margin-top: 24px;
   animation: slideUp 0.6s;
@@ -63,19 +63,19 @@
 }
 
 .author-block {
-  margin-top: 64px;
+  margin-top: 48px;
   animation: slideUp 0.6s;
 }
 
 .author-name {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #1bffff;
   font-weight: 700;
   text-shadow: 0 0 8px #1bffff88;
 }
 
 .author-school {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #b0b3c6;
   text-shadow: 0 0 4px #8e44ad88;
 }
@@ -84,12 +84,12 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   color: #1bffff;
   animation: bounce 1.2s infinite;
   filter: drop-shadow(0 0 8px #ff00cc88);
@@ -139,12 +139,12 @@
 .card-green:hover, .card-yellow:hover { transform: scale(1.05); box-shadow: 0 0 24px 4px #1bffff88; }
 
 .icon-green { color: #22c55e; width: 32px; height: 32px; margin-top: 4px; flex-shrink: 0; }
-.card-title-green { color: #1bffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
-.card-title-yellow { color: #ff00cc; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+.card-title-green { color: #1bffff; font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
+.card-title-yellow { color: #ff00cc; font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
 .card-desc { color: #e0e0e0; }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #1bffff;
   margin-bottom: 32px;
@@ -161,7 +161,7 @@
 }
 
 .section-desc {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #e0e0e0;
   line-height: 1.5;
 }
@@ -179,7 +179,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 18px 32px;
+  padding: 16px 28px;
   border-radius: 16px;
   font-weight: 600;
   box-shadow: 0 2px 8px #8e44ad44;
@@ -189,7 +189,7 @@
   cursor: pointer;
 }
 .nav-btn-prev {
-  background: linear-gradient(90deg, #1bffff, #8e44ad);
+  background: linear-gradient(90deg, #232b5d, #2e3192);
   color: #fff;
   box-shadow: 0 0 8px #1bffff88;
 }
@@ -231,7 +231,7 @@
 
 .progress-bar-block { margin-bottom: 16px; }
 .progress-bar-bg {
-  height: 12px;
+  height: 6px;
   background: #444;
   border-radius: 999px;
   overflow: hidden;
