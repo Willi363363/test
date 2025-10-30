@@ -13,7 +13,7 @@ import {
   GitBranch,
   Award
 } from 'lucide-react';
-import './PiscineReview.css';
+import './piscinereview.css';
 
 const PiscineReview = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

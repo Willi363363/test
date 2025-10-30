@@ -1,5 +1,5 @@
 import React from 'react';
-import PiscineReview from './PiscineReview';
+import PiscineReview from './piscinereview';
 
 function App() {
   return <PiscineReview />;
