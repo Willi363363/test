@@ -118,32 +118,44 @@ const PiscineReview = () => {
       content: (
         <div className="section animate-fadeIn">
           <h2 className="section-title text-blue animate-slideInLeft">Progression du projet my_printf</h2>
-
           <div className="timeline">
             <div className="timeline-bar" />
-            <div className="timeline-items">
-              {[
-                { phase: "Phase 1", title: "bsminiprintf", desc: "Exercices préparatoires avec stdarg.h", formats: "sum_numbers, sum_strings_length, disp_stdarg", color: "blue" },
-                { phase: "Phase 2", title: "miniprintf", desc: "Version simplifiée de printf", formats: "%c, %s, %i, %d, %%", color: "purple" },
-                { phase: "Phase 3", title: "my_printf COMPLET", desc: "Implémentation complète avec 11 formats", formats: "%c, %s, %i, %d, %f, %e, %E, %x, %X, %o, %u, %p, %%", color: "pink" }
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className={`timeline-card animate-slideInRight panel-${item.color}`}
-                  style={{ animationDelay: `${idx * 0.15}s` }}
-                >
-                  <div className="timeline-header">
-                    <div className={`timeline-index bg-${item.color}`}>{idx + 1}</div>
-                    <div>
-                      <p className={`timeline-phase text-${item.color}`}>{item.phase}</p>
-                      <h3 className="timeline-title">{item.title}</h3>
-                    </div>
+            {[
+              {
+                phase: "Phase 1",
+                title: "bsminiprintf",
+                desc: "Exercices préparatoires avec stdarg.h",
+                formats: "sum_numbers, sum_strings_length, disp_stdarg"
+              },
+              {
+                phase: "Phase 2",
+                title: "miniprintf",
+                desc: "Version simplifiée de printf",
+                formats: "%c, %s, %i, %d, %%"
+              },
+              {
+                phase: "Phase 3",
+                title: "my_printf COMPLET",
+                desc: "Implémentation complète avec 11 formats",
+                formats: "%c, %s, %i, %d, %f, %e, %E, %x, %X, %o, %u, %p, %%"
+              }
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="timeline-card animate-slideInRight"
+                style={{animationDelay: `${idx * 0.15}s`}}
+              >
+                <div className="timeline-header">
+                  <div className="timeline-index">{idx + 1}</div>
+                  <div>
+                    <p className="timeline-phase">{item.phase}</p>
+                    <h3 className="timeline-title">{item.title}</h3>
                   </div>
-                  <p className="text-muted mb-sm">{item.desc}</p>
-                  <p className="code-chip">{item.formats}</p>
                 </div>
-              ))}
-            </div>
+                <p className="text-muted">{item.desc}</p>
+                <p className="code-chip">{item.formats}</p>
+              </div>
+            ))}
           </div>
         </div>
       )

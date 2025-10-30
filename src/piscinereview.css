@@ -241,3 +241,85 @@ body, .app-root {
 .pulse { animation: pulse 1.5s infinite; }
 .bounce { animation: bounce 1.2s infinite; }
 
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  padding-left: 60px;
+  margin: 40px 0;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+  border-radius: 4px;
+}
+
+.timeline-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  left: -56px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  background: #8b5cf6;
+  border: 3px solid #1e293b;
+  border-radius: 50%;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.timeline-index {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.timeline-phase {
+  color: #818cf8;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.code-chip {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: #94a3b8;
+  font-family: monospace;
+  font-size: 0.875rem;
+  margin-top: 12px;
+}
+
