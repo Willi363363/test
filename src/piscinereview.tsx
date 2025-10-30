@@ -23,20 +23,12 @@ const PiscineReview = () => {
       title: "Review Piscine Partie 2",
       subtitle: "My_printf",
       content: (
-        <div className="slide-center fade-in">
-          <div className="relative">
-            <h1 className="title-main pulse">Review Piscine Partie 2</h1>
-            <div className="title-bg"></div>
-          </div>
-          <h2 className="subtitle slide-up">Reproduction complète de printf en C</h2>
-          <div className="author-block slide-up delay-1">
+        <div className="slide-center">
+          <h1 className="title-main">Review Piscine Partie 2</h1>
+          <h2 className="subtitle">Reproduction complète de printf en C</h2>
+          <div className="author-block">
             <p className="author-name">ROUVIERE William</p>
             <p className="author-school">Epitech Montpellier - 1ère année</p>
-            <div className="icon-row">
-              <Code className="icon bounce" />
-              <Terminal className="icon bounce delay-2" />
-              <Cpu className="icon bounce delay-3" />
-            </div>
           </div>
         </div>
       )

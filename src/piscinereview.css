@@ -1,7 +1,7 @@
 /* === FOND GLOBAL === */
 body, .app-root {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f1729 0%, #1a237e 100%);
+  background: radial-gradient(ellipse at 60% 40%, #232b5d 0%, #2e3192 40%, #8e44ad 100%);
   color: #fff;
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
@@ -321,5 +321,64 @@ body, .app-root {
   font-family: monospace;
   font-size: 0.875rem;
   margin-top: 12px;
+}
+
+/* === PREMIER SLIDE === */
+.slide-center {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.title-main {
+  font-size: 5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #738ADB, #9B6ADD, #B054DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(115, 138, 219, 0.5);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.author-block {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-name {
+  font-size: 2.2rem;
+  color: #738ADB;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.author-school {
+  font-size: 1.6rem;
+  color: #b0b3c6;
+  margin-bottom: 2rem;
+}
+
+.icon-group {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
 }
 
