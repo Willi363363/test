@@ -23,20 +23,19 @@ const PiscineReview = () => {
       title: "Review Piscine Partie 2",
       subtitle: "My_printf",
       content: (
-        <div className="section-center animate-fadeIn">
-          <h1 className="title-xxl">Review Piscine Partie 2</h1>
-          <h2 className="subtitle-xl">Reproduction complète de printf en C</h2>
-          <div className="author-section" style={{marginTop: "3rem", textAlign: "center"}}>
-            <p className="author-name" style={{color: "#818cf8", fontSize: "1.5rem", marginBottom: "0.5rem"}}>
-              ROUVIERE William
-            </p>
-            <p className="author-school" style={{color: "#94a3b8", fontSize: "1.2rem"}}>
-              Epitech Montpellier - 1ère année
-            </p>
-            <div className="icon-group" style={{marginTop: "2rem", display: "flex", justifyContent: "center", gap: "2rem"}}>
-              <Code className="icon-lg" style={{color: "#818cf8"}} />
-              <Terminal className="icon-lg" style={{color: "#8b5cf6"}} />
-              <Cpu className="icon-lg" style={{color: "#a78bfa"}} />
+        <div className="slide-center fade-in">
+          <div className="relative">
+            <h1 className="title-main pulse">Review Piscine Partie 2</h1>
+            <div className="title-bg"></div>
+          </div>
+          <h2 className="subtitle slide-up">Reproduction complète de printf en C</h2>
+          <div className="author-block slide-up delay-1">
+            <p className="author-name">ROUVIERE William</p>
+            <p className="author-school">Epitech Montpellier - 1ère année</p>
+            <div className="icon-row">
+              <Code className="icon bounce" />
+              <Terminal className="icon bounce delay-2" />
+              <Cpu className="icon bounce delay-3" />
             </div>
           </div>
         </div>
