@@ -336,50 +336,52 @@ const PiscineReview = () => {
         <div className="section animate-fadeIn">
           <h2 className="section-title text-blue animate-slideInLeft">Réussites techniques et organisation</h2>
 
-          <div className="grid grid-2">
-            {[
-              {
-                num: "1",
-                title: "Code modulaire",
-                desc: "Chaque fonction dans un fichier séparé pour une maintenance facile",
-                icon: <Code className="icon-xl icon-blue" />,
-                color: "blue"
-              },
-              {
-                num: "2",
-                title: "Tests Criterion",
-                desc: "Validation automatisée de tous les formats avec tests unitaires",
-                icon: <CheckCircle className="icon-xl icon-green" />,
-                color: "green"
-              },
-              {
-                num: "3",
-                title: "Makefile optimisé",
-                desc: "Compilation automatique avec targets tests_run et gcovr",
-                icon: <Terminal className="icon-xl icon-purple" />,
-                color: "purple"
-              },
-              {
-                num: "4",
-                title: "Gestion d'erreurs",
-                desc: "Cas limites gérés (NULL, 0, valeurs négatives)",
-                icon: <AlertCircle className="icon-xl icon-orange" />,
-                color: "orange"
-              }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className={`method-card method-${item.color} animate-slideInUp hover-zoom`}
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <div className="method-header">
-                  <div className={`method-index bg-${item.color}`}>{item.num}</div>
-                  {item.icon}
+          <div className="methodology-panel animate-scaleIn">
+            <div className="method-grid">
+              {[
+                {
+                  num: "1",
+                  title: "Code modulaire",
+                  desc: "Chaque fonction dans un fichier séparé pour une maintenance facile",
+                  icon: <Code className="method-icon" />,
+                  color: "blue"
+                },
+                {
+                  num: "2",
+                  title: "Tests Criterion",
+                  desc: "Validation automatisée de tous les formats avec tests unitaires",
+                  icon: <CheckCircle className="method-icon" />,
+                  color: "green"
+                },
+                {
+                  num: "3",
+                  title: "Makefile optimisé",
+                  desc: "Compilation automatique avec targets tests_run et gcovr",
+                  icon: <Terminal className="method-icon" />,
+                  color: "purple"
+                },
+                {
+                  num: "4",
+                  title: "Gestion d'erreurs",
+                  desc: "Cas limites gérés (NULL, 0, valeurs négatives)",
+                  icon: <AlertCircle className="method-icon" />,
+                  color: "orange"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`method-card method-${item.color}`}>
+                  <div className="method-card-left">
+                    <div className="method-badge">{item.num}</div>
+                  </div>
+                  <div className="method-card-body">
+                    <div className="method-card-top">
+                      <div className="method-card-icon">{item.icon}</div>
+                      <h3 className="method-card-title">{item.title}</h3>
+                    </div>
+                    <p className="method-card-desc">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="method-title">{item.title}</h3>
-                <p className="text-muted">{item.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       )
