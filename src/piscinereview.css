@@ -780,10 +780,117 @@ body, .app-root {
   font-weight: 600;
 }
 
-/* responsive */
-@media (max-width: 980px) {
-  .conclusion-grid { grid-template-columns: 1fr; }
-  .conclusion-title { font-size: 1.8rem; }
-  .conclusion-card { padding: 14px; }
+/* === AMÉLIORATIONS / CONCLUSION (nouveau style pour la page demandée) === */
+.improve-page-title {
+  font-size: 2.8rem;
+  color: #9cd1ff;
+  margin: 0 0 18px 0;
+  font-weight: 800;
+  text-shadow: 0 6px 20px rgba(20,60,120,0.12);
+}
+
+/* panel container similar to image */
+.improve-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10,16,32,0.45), rgba(8,12,30,0.55));
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(5,12,40,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* subtle colored accent at top (rounded) */
+.panel-accent-top {
+  position: absolute;
+  right: 18px;
+  top: -10px;
+  width: 160px;
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #60a5fa, #8b5cf6, #ff4fa6);
+  box-shadow: 0 6px 18px rgba(139,92,246,0.12);
+  pointer-events: none;
+}
+
+/* each improve box (stacked) */
+.improve-box {
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.008));
+  display: block;
+  border: 2px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* colored outline variants */
+.improve-yellow { border-color: rgba(245,158,11,0.35); }
+.improve-blue   { border-color: rgba(59,130,246,0.35); }
+.improve-green  { border-color: rgba(16,185,129,0.28); }
+
+/* title inside box */
+.improve-box-title {
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e6eefc;
+  font-weight: 700;
+}
+
+/* small emoji/icon appearance */
+.improve-emoji {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  font-size: 1.1rem;
+}
+
+/* list inside boxes */
+.improve-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #b9c7e6;
+  line-height: 1.6;
+  list-style: none;
+}
+.improve-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+.improve-list li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background: currentColor;
+  opacity: 0.95;
+}
+/* color bullets per box variant */
+.improve-yellow .improve-list li::before { background: #f59e0b; }
+.improve-blue   .improve-list li::before { background: #60a5fa; }
+.improve-green  .improve-list li::before { background: #10b981; }
+
+/* readable bullet text color */
+.improve-yellow .improve-list { color: #f7e6cf; }
+.improve-blue   .improve-list { color: #cfe8ff; }
+.improve-green  .improve-list { color: #d6f7e8; }
+
+/* responsive: slightly smaller paddings on mobile */
+@media (max-width: 900px) {
+  .improve-panel { padding: 16px; }
+  .panel-accent-top { width: 120px; right: 12px; top: -8px; }
+  .improve-box { padding: 14px; }
+  .improve-page-title { font-size: 2.1rem; }
 }
 

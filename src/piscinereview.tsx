@@ -392,102 +392,34 @@ const PiscineReview = () => {
         <div className="section animate-fadeIn">
           <h2 className="section-title text-blue animate-slideInLeft">Ce que je peux améliorer</h2>
 
-          <div className="stack">
-            {[
-              {
-                category: "⏰ Organisation",
-                items: [
-                  "Anticiper davantage la charge de travail",
-                  "Mieux répartir le temps entre les différents projets",
-                  "Commencer plus tôt pour éviter le stress de dernière minute"
-                ],
-                color: "yellow"
-              },
-              {
-                category: "💻 Code",
-                items: [
-                  "Optimiser certaines fonctions pour réduire la complexité",
-                  "Ajouter plus de commentaires pour faciliter la relecture",
-                  "Réduire les allocations mémoire multiples"
-                ],
-                color: "blue"
-              },
-              {
-                category: "🧪 Tests",
-                items: [
-                  "Augmenter la couverture de code avec plus de tests",
-                  "Tester les cas extrêmes plus systématiquement",
-                  "Automatiser davantage les validations"
-                ],
-                color: "green"
-              }
-            ].map((section, idx) => (
-              <div
-                key={idx}
-                className={`improve-card improve-${section.color} animate-slideInRight`}
-                style={{ animationDelay: `${idx * 0.15}s` }}
-              >
-                <h3 className="improve-title">{section.category}</h3>
-                <ul className="bullet-list">
-                  {section.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="bullet-item">
-                      <span className={`bullet-dot bg-${section.color}`} />
-                      <p className="text-muted text-md">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Conclusion",
-      content: (
-        <div className="section animate-fadeIn">
-          <div className="conclusion-panel">
-            <h2 className="conclusion-title">Bilan et perspectives</h2>
+          <div className="improve-panel">
+            <div className="panel-accent-top" />
 
-            <div className="conclusion-grid">
-              {[
-                {
-                  icon: <Award className="conclusion-icon" />,
-                  title: "Apprentissage approfondi",
-                  desc: "Maîtrise de printf, stdarg.h et gestion mémoire en C",
-                  colorClass: "conclusion-blue"
-                },
-                {
-                  icon: <CheckCircle className="conclusion-icon" />,
-                  title: "Projet fonctionnel",
-                  desc: "11 formats implémentés avec tests validés et code modulaire",
-                  colorClass: "conclusion-green"
-                },
-                {
-                  icon: <TrendingUp className="conclusion-icon" />,
-                  title: "Base solide",
-                  desc: "Fondations techniques pour les futurs projets à Epitech",
-                  colorClass: "conclusion-purple"
-                }
-              ].map((item, idx) => (
-                <div key={idx} className={`conclusion-card ${item.colorClass}`}>
-                  <div className="conclusion-card-left">
-                    <div className="conclusion-icon-wrap">{item.icon}</div>
-                  </div>
-                  <div className="conclusion-card-body">
-                    <h3 className="conclusion-card-title">{item.title}</h3>
-                    <p className="conclusion-card-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="improve-box improve-yellow">
+              <h3 className="improve-box-title"><span className="improve-emoji">📌</span> Organisation</h3>
+              <ul className="improve-list">
+                <li>Anticiper davantage la charge de travail</li>
+                <li>Mieux répartir le temps entre les différents projets</li>
+                <li>Commencer plus tôt pour éviter le stress de dernière minute</li>
+              </ul>
             </div>
 
-            <div className="final-summary">
-              <p className="final-summary-text">
-                ✨ Satisfaction personnelle — Malgré les défis, le projet est fonctionnel et bien organisé.
-                <br/><br/>
-                <strong>Prêt pour les prochains défis !</strong>
-              </p>
+            <div className="improve-box improve-blue">
+              <h3 className="improve-box-title"><span className="improve-emoji">💻</span> Code</h3>
+              <ul className="improve-list">
+                <li>Optimiser certaines fonctions pour réduire la complexité</li>
+                <li>Ajouter plus de commentaires pour faciliter la relecture</li>
+                <li>Réduire les allocations mémoire multiples</li>
+              </ul>
+            </div>
+
+            <div className="improve-box improve-green">
+              <h3 className="improve-box-title"><span className="improve-emoji">🧪</span> Tests</h3>
+              <ul className="improve-list">
+                <li>Augmenter la couverture de code avec plus de tests</li>
+                <li>Tester les cas extrêmes plus systématiquement</li>
+                <li>Automatiser davantage les validations</li>
+              </ul>
             </div>
           </div>
         </div>
