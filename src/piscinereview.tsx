@@ -52,7 +52,9 @@ const PiscineReview = () => {
                 <CheckCircle className="icon-lg icon-green" />
                 <div>
                   <h3 className="card-heading text-green">Points forts</h3>
-                  <p className="text-muted">Gestion du temps réussie, projet rendu dans les délais, travailler en autonomie tout en restant collectif</p>
+                  <p className="text-muted">
+                    Gestion du temps réussie, projet rendu dans les délais, 
+                    travailler en autonomie tout en sachant rester collectif.</p>
                 </div>
               </div>
             </div>
@@ -62,7 +64,9 @@ const PiscineReview = () => {
                 <AlertCircle className="icon-lg icon-yellow" />
                 <div>
                   <h3 className="card-heading text-yellow">Axes d'amélioration</h3>
-                  <p className="text-muted">Optimisation du temps de travail et meilleure anticipation</p>
+                  <p className="text-muted">
+                    Optimisation du temps de travail et meilleure anticipation. 
+                    Poser un plan avant même de commencer le projet.</p>
                 </div>
               </div>
             </div>
@@ -84,14 +88,17 @@ const PiscineReview = () => {
               <p className="piscine-desc">
                 <span className="highlight">2 semaines intensives</span> de programmation C pour renforcer rapidement les compétences.
                 Un environnement pédagogique immersif avec de nombreux projets en groupe favorisant la coopération et l'entraide.
+                Cette piscine est, certes très épuisante, physiquement comme mentalement, cependant 
+                elle reste une très belle expérience. Elle nous permet d'apprendre rapidement
+                le C mais aussi découvrir des valeurs tels que l'entraide la coopération.
               </p>
             </div>
 
             <div className="tiles-row">
               {[
-                { icon: <Code className="tile-icon-svg" />, title: "Rush 1-7", desc: "Formes ASCII" },
-                { icon: <Database className="tile-icon-svg" />, title: "Rush 2-7", desc: "Fréquences" },
-                { icon: <Terminal className="tile-icon-svg" />, title: "My_printf", desc: "Projet final" }
+                { icon: <Code className="tile-icon-svg" />, title: "mini_my_printf", desc: "Boostrap" },
+                { icon: <Database className="tile-icon-svg" />, title: "final_stumper", desc: "Examen" },
+                { icon: <Terminal className="tile-icon-svg" />, title: "my_printf", desc: "Projet final" }
               ].map((item, idx) => (
                 <div key={idx} className="tile">
                   <div className="tile-card">
@@ -116,7 +123,7 @@ const PiscineReview = () => {
             {[
               {
                 phase: "Phase 1",
-                title: "bsminiprintf",
+                title: "bootstrap mini_my_printf",
                 desc: "Exercices préparatoires avec stdarg.h",
                 formats: "sum_numbers, sum_strings_length, disp_stdarg"
               },
@@ -129,8 +136,8 @@ const PiscineReview = () => {
               {
                 phase: "Phase 3",
                 title: "my_printf COMPLET",
-                desc: "Implémentation complète avec 11 formats",
-                formats: "%c, %s, %i, %d, %f, %e, %E, %x, %X, %o, %u, %p, %%"
+                desc: "Implémentation complète avec 12 specifiers",
+                formats: "%c, %s, %i, %d, %f, %e, %E, %x, %X, %o, %u, %p"
               }
             ].map((item, idx) => (
               <div
@@ -199,7 +206,7 @@ const PiscineReview = () => {
           </div>
 
           <div className="summary-box animate-slideInUp">
-            <span>17 fichiers C</span> organisés en modules réutilisables + <span>Makefile</span> avec tests Criterion
+            <span>De nombreux fichiers C</span> étant donc des fonctions réutilisables + <span>Makefile</span> avec tests Criterion
           </div>
         </div>
       )
@@ -208,7 +215,7 @@ const PiscineReview = () => {
       title: "Formats implémentés",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title">Les 11 formats de my_printf</h2>
+          <h2 className="section-title">Les 13 cas vérifié par notre my_printf</h2>
           <div className="format-grid">
             {[
               { format: "%c", desc: "Caractère", example: "'A'" },
@@ -251,7 +258,7 @@ const PiscineReview = () => {
                   icon: <Zap size={28} className="text-yellow-400" />,
                   title: "Gestion mémoire",
                   desc: "Allocation dynamique avec malloc/free pour les conversions",
-                  solution: "Libération systématique après utilisation"
+                  solution: "Libération systématique après utilisation et/ou remplissage du buffer par des 0"
                 },
                 {
                   icon: <Code size={28} className="text-blue-400" />,
@@ -305,7 +312,7 @@ const PiscineReview = () => {
                   icon: <Cpu size={28} className="text-cyan-400" />,
                   title: "Valeur de retour",
                   desc: "Compter précisément tous les caractères affichés",
-                  solution: "Système de compteur incrémental"
+                  solution: "Système de compteur incrémental à balader dans toutes les fonctions"
                 }
               ].map((item, idx) => (
                 <div
@@ -343,29 +350,29 @@ const PiscineReview = () => {
               {[
                 {
                   num: "1",
-                  title: "Code modulaire",
-                  desc: "Chaque fonction dans un fichier séparé pour une maintenance facile",
+                  title: "Code et structure modulaire",
+                  desc: "Chaque fonction dans un fichier séparé pour une maintenance facile, ainsi qu'une structure simple permettant l'ajout rapide d'un specifier",
                   icon: <Code className="method-icon" />,
                   color: "blue"
                 },
                 {
                   num: "2",
-                  title: "Tests Criterion",
-                  desc: "Validation automatisée de tous les formats avec tests unitaires",
+                  title: "Tests Criterion ",
+                  desc: "Réalisé au tout début du projet et modifier par la suite, ils nous ont permis la validation automatisée de tous les formats avec des tests unitaires",
                   icon: <CheckCircle className="method-icon" />,
                   color: "green"
                 },
                 {
                   num: "3",
                   title: "Makefile optimisé",
-                  desc: "Compilation automatique avec targets tests_run et gcovr",
+                  desc: "Compilation automatique avec targets tests_run et gcovr nous permettant de voir, à chaque étape ou édition, notre coverage",
                   icon: <Terminal className="method-icon" />,
                   color: "purple"
                 },
                 {
                   num: "4",
                   title: "Gestion d'erreurs",
-                  desc: "Cas limites gérés (NULL, 0, valeurs négatives)",
+                  desc: "Cas limites gérés (NULL, 0, valeurs négatives) pour se rapprocher le plus possible de la fonction printf",
                   icon: <AlertCircle className="method-icon" />,
                   color: "orange"
                 }
@@ -400,18 +407,18 @@ const PiscineReview = () => {
             <div className="improve-box improve-yellow">
               <h3 className="improve-box-title"><span className="improve-emoji">📌</span> Organisation</h3>
               <ul className="improve-list">
-                <li>Anticiper davantage la charge de travail</li>
+                <li>Anticiper davantage la charge de travail et réfléchir au projet avant même de s'y lancer</li>
                 <li>Mieux répartir le temps entre les différents projets</li>
-                <li>Commencer plus tôt pour éviter le stress de dernière minute</li>
+                <li>Commencer par le plus simple pour éviter de perdre du temps et de rester bloquer</li>
               </ul>
             </div>
 
             <div className="improve-box improve-blue">
               <h3 className="improve-box-title"><span className="improve-emoji">💻</span> Code</h3>
               <ul className="improve-list">
-                <li>Optimiser certaines fonctions pour réduire la complexité</li>
-                <li>Ajouter plus de commentaires pour faciliter la relecture</li>
-                <li>Réduire les allocations mémoire multiples</li>
+                <li>Optimiser certaines fonctions pour réduire la complexité et la répétition</li>
+                <li>Créer une structure solide dès le debut avant de commencer le projet pour éviter d'avoir à la remplacer par la suite</li>
+                <li>Réduire les allocations mémoire multiples et inutiles</li>
               </ul>
             </div>
 
@@ -420,7 +427,7 @@ const PiscineReview = () => {
               <ul className="improve-list">
                 <li>Augmenter la couverture de code avec plus de tests</li>
                 <li>Tester les cas extrêmes plus systématiquement</li>
-                <li>Automatiser davantage les validations</li>
+                <li>Remplacer notre strucutre de if par un tableau de pointeurs sur fonctions</li>
               </ul>
             </div>
           </div>
