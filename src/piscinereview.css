@@ -896,26 +896,25 @@ body, .app-root {
 
 /* === PISCINE (page 3) === */
 .piscine-panel {
-  background: linear-gradient(180deg, rgba(8,16,48,0.88), rgba(20,34,74,0.9));
-  border-radius: 16px;
-  padding: 28px;
-  border: 1px solid rgba(255,255,255,0.03);
-  box-shadow: 0 24px 60px rgba(6,18,60,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-  margin-bottom: 24px;
+  /* rendre le panneau transparent pour qu'il se fonde avec le slide */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 0;
   position: relative;
 }
 
-/* small decorative accent on top-right like in image */
+/* rendre l'accent top moins visible (optionnel) */
 .piscine-top-accent {
-  position: absolute;
-  right: 20px;
-  top: -12px;
-  width: 160px;
-  height: 6px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #4f46e5, #8b5cf6, #ff4fa6);
-  box-shadow: 0 8px 24px rgba(139,92,246,0.12);
-  pointer-events: none;
+  /* si tu veux le garder, réduis l'opacité et la taille */
+  opacity: 0.18;
+  width: 120px;
+  height: 4px;
+  top: -8px;
+  right: 16px;
+  box-shadow: none;
 }
 
 .piscine-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom: 12px; }
@@ -949,13 +948,12 @@ body, .app-root {
 }
 
 .tile-card {
-  background: linear-gradient(180deg, rgba(10,18,40,0.6), rgba(12,22,46,0.6));
+  background: rgba(12,22,40,0.45); /* même tonalité sombre semi-transparente */
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 20px rgba(6,18,60,0.35);
   border-radius: 12px;
   padding: 22px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.03);
-  box-shadow: 0 12px 30px rgba(20, 40, 80, 0.45);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
   height: 100%;
   display:flex;
   flex-direction:column;
