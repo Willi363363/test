@@ -241,25 +241,24 @@ const PiscineReview = () => {
       title: "Défis techniques",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title text-blue animate-slideInLeft">Difficultés rencontrées</h2>
-
-          <div className="grid grid-2">
-            <div>
+          <h2 className="section-title">Difficultés rencontrées</h2>
+          <div className="challenges-grid">
+            <div className="challenge-block animate-slideInLeft">
               {[
                 {
-                  icon: <Zap className="icon-lg icon-yellow" />,
+                  icon: <Zap size={28} className="text-yellow-400" />,
                   title: "Gestion mémoire",
                   desc: "Allocation dynamique avec malloc/free pour les conversions",
                   solution: "Libération systématique après utilisation"
                 },
                 {
-                  icon: <Code className="icon-lg icon-blue" />,
+                  icon: <Code size={28} className="text-blue-400" />,
                   title: "Notation scientifique",
                   desc: "Calcul complexe de l'exposant et gestion des cas limites",
                   solution: "Fonctions dédiées pour %e et %E"
                 },
                 {
-                  icon: <Database className="icon-lg icon-purple" />,
+                  icon: <Database size={28} className="text-purple-400" />,
                   title: "Précision des flottants",
                   desc: "Affichage correct avec 6 décimales pour %f",
                   solution: "Arrondi à 0.0000005 avant conversion"
@@ -267,37 +266,41 @@ const PiscineReview = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="challenge-card challenge-warm animate-slideInLeft"
-                  style={{ animationDelay: `${idx * 0.1}s` }}
+                  className="challenge-card"
+                  style={{animationDelay: `${idx * 0.1}s`}}
                 >
                   <div className="challenge-header">
-                    {item.icon}
+                    <div className="challenge-icon">
+                      {item.icon}
+                    </div>
                     <h3 className="challenge-title">{item.title}</h3>
                   </div>
-                  <p className="text-muted mb-xs">{item.desc}</p>
-                  <div className="solution-chip">
-                    <p className="text-green"><strong>Solution:</strong> {item.solution}</p>
+                  <p className="challenge-desc">{item.desc}</p>
+                  <div className="solution-box">
+                    <p className="solution-text">
+                      <strong>Solution:</strong> {item.solution}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div>
+            <div className="challenge-block animate-slideInRight">
               {[
                 {
-                  icon: <Terminal className="icon-lg icon-green" />,
+                  icon: <Terminal size={28} className="text-green-400" />,
                   title: "Conversions de bases",
                   desc: "Hex (base 16) et Octal (base 8) avec gestion des zéros",
                   solution: "Algorithme de division successive"
                 },
                 {
-                  icon: <GitBranch className="icon-lg icon-pink" />,
+                  icon: <GitBranch size={28} className="text-pink-400" />,
                   title: "Gestion des pointeurs",
                   desc: "Affichage d'adresses mémoire avec format 0x",
                   solution: "Cast en unsigned long long"
                 },
                 {
-                  icon: <Cpu className="icon-lg icon-cyan" />,
+                  icon: <Cpu size={28} className="text-cyan-400" />,
                   title: "Valeur de retour",
                   desc: "Compter précisément tous les caractères affichés",
                   solution: "Système de compteur incrémental"
@@ -305,16 +308,20 @@ const PiscineReview = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="challenge-card challenge-sunny animate-slideInRight"
-                  style={{ animationDelay: `${idx * 0.1}s` }}
+                  className="challenge-card"
+                  style={{animationDelay: `${idx * 0.1}s`}}
                 >
                   <div className="challenge-header">
-                    {item.icon}
+                    <div className="challenge-icon">
+                      {item.icon}
+                    </div>
                     <h3 className="challenge-title">{item.title}</h3>
                   </div>
-                  <p className="text-muted mb-xs">{item.desc}</p>
-                  <div className="solution-chip">
-                    <p className="text-green"><strong>Solution:</strong> {item.solution}</p>
+                  <p className="challenge-desc">{item.desc}</p>
+                  <div className="solution-box">
+                    <p className="solution-text">
+                      <strong>Solution:</strong> {item.solution}
+                    </p>
                   </div>
                 </div>
               ))}
