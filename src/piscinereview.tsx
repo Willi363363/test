@@ -446,49 +446,49 @@ const PiscineReview = () => {
       title: "Conclusion",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title text-blue animate-slideInLeft">Bilan et perspectives</h2>
+          <div className="conclusion-panel">
+            <h2 className="conclusion-title">Bilan et perspectives</h2>
 
-          <div className="grid grid-3">
-            {[
-              {
-                icon: <Award className="icon-xxl icon-blue" />,
-                title: "Apprentissage approfondi",
-                desc: "Maîtrise complète de printf, stdarg.h et gestion mémoire en C"
-              },
-              {
-                icon: <CheckCircle className="icon-xxl icon-green" />,
-                title: "Projet fonctionnel",
-                desc: "11 formats implémentés avec tests validés et code modulaire"
-              },
-              {
-                icon: <TrendingUp className="icon-xxl icon-purple" />,
-                title: "Base solide",
-                desc: "Fondations techniques pour les futurs projets à Epitech"
-              }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="tile tile-dark animate-slideInUp hover-zoom"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <div className="tile-icon">{item.icon}</div>
-                <h3 className="tile-title">{item.title}</h3>
-                <p className="text-muted">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            <div className="conclusion-grid">
+              {[
+                {
+                  icon: <Award className="conclusion-icon" />,
+                  title: "Apprentissage approfondi",
+                  desc: "Maîtrise de printf, stdarg.h et gestion mémoire en C",
+                  colorClass: "conclusion-blue"
+                },
+                {
+                  icon: <CheckCircle className="conclusion-icon" />,
+                  title: "Projet fonctionnel",
+                  desc: "11 formats implémentés avec tests validés et code modulaire",
+                  colorClass: "conclusion-green"
+                },
+                {
+                  icon: <TrendingUp className="conclusion-icon" />,
+                  title: "Base solide",
+                  desc: "Fondations techniques pour les futurs projets à Epitech",
+                  colorClass: "conclusion-purple"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`conclusion-card ${item.colorClass}`}>
+                  <div className="conclusion-card-left">
+                    <div className="conclusion-icon-wrap">{item.icon}</div>
+                  </div>
+                  <div className="conclusion-card-body">
+                    <h3 className="conclusion-card-title">{item.title}</h3>
+                    <p className="conclusion-card-desc">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-          <div className="panel panel-green-blue animate-scaleIn mt-lg">
-            <p className="paragraph-xl text-muted text-center">
-              <span className="text-green bold text-xl">✨ Satisfaction personnelle</span>
-              <br /><br />
-              Malgré les défis rencontrés, j'ai réussi à créer un <span className="text-blue semibold">code fonctionnel et bien organisé</span>.
-              <br />
-              Cette piscine m'a appris l'importance de la <span className="text-purple semibold">rigueur</span>,
-              de l'<span className="text-pink semibold">organisation</span> et de la <span className="text-yellow semibold">persévérance</span>.
-              <br /><br />
-              <span className="text-lg">🚀 Prêt pour les prochains défis ! 🚀</span>
-            </p>
+            <div className="final-summary">
+              <p className="final-summary-text">
+                ✨ Satisfaction personnelle — Malgré les défis, le projet est fonctionnel et bien organisé.
+                <br/><br/>
+                <strong>Prêt pour les prochains défis !</strong>
+              </p>
+            </div>
           </div>
         </div>
       )
