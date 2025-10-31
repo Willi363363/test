@@ -928,13 +928,15 @@ body, .app-root {
 }
 
 .piscine-inner {
-  background: rgba(255,255,255,0.02);
+  /* enlever le rectangle clair qui cassait la teinte */
+  background: transparent;         /* plus de bloc blanc/clair */
+  border: none;                    /* supprime la bordure différente */
+  box-shadow: none;                /* supprime l'ombre locale */
   border-radius: 12px;
   padding: 20px;
-  border: 1px solid rgba(99,102,241,0.06);
   margin-bottom: 20px;
-  box-shadow: 0 8px 30px rgba(47, 64, 128, 0.12);
 }
+
 .piscine-desc { color: #cfe6ff; font-size: 1.05rem; line-height: 1.6; margin: 0; }
 .piscine-desc .highlight { color:#9ad1ff; font-weight:700; }
 
