@@ -90,7 +90,7 @@ const PiscineReview = () => {
                 Un environnement pédagogique immersif avec de nombreux projets en groupe favorisant la coopération et l'entraide.
                 Cette piscine est, certes très épuisante, physiquement comme mentalement, cependant 
                 elle reste une très belle expérience. Elle nous permet d'apprendre rapidement
-                le C mais aussi découvrir des valeurs tels que l'entraide la coopération.
+                le C mais aussi de découvrir des valeurs tels que l'entraide et la coopération.
               </p>
             </div>
 
@@ -419,6 +419,7 @@ const PiscineReview = () => {
                 <li>Optimiser certaines fonctions pour réduire la complexité et la répétition</li>
                 <li>Créer une structure solide dès le debut avant de commencer le projet pour éviter d'avoir à la remplacer par la suite</li>
                 <li>Réduire les allocations mémoire multiples et inutiles</li>
+                <li>Remplacer notre strucutre de if par un tableau de pointeurs sur fonctions</li>
               </ul>
             </div>
 
@@ -427,7 +428,7 @@ const PiscineReview = () => {
               <ul className="improve-list">
                 <li>Augmenter la couverture de code avec plus de tests</li>
                 <li>Tester les cas extrêmes plus systématiquement</li>
-                <li>Remplacer notre strucutre de if par un tableau de pointeurs sur fonctions</li>
+                <li>Mieux trier les tests et les renommer surtout</li>
               </ul>
             </div>
           </div>
