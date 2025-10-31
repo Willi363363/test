@@ -74,32 +74,34 @@ const PiscineReview = () => {
       title: "La Piscine d'Epitech",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title text-blue animate-slideInLeft">La Piscine d'Epitech</h2>
+          <div className="piscine-panel animate-scaleIn">
+            <div className="piscine-header">
+              <h2 className="piscine-title">La Piscine d'Epitech</h2>
+              <div className="piscine-top-accent" />
+            </div>
 
-          <div className="panel panel-blue animate-scaleIn mb-md">
-            <p className="paragraph-lg text-muted">
-              <span className="text-indigo bold">2 semaines intensives</span> de programmation C pour renforcer
-              rapidement les compétences. Un environnement pédagogique immersif avec de nombreux projets en groupe
-              favorisant la coopération et l'entraide.
-            </p>
-          </div>
+            <div className="piscine-inner">
+              <p className="piscine-desc">
+                <span className="highlight">2 semaines intensives</span> de programmation C pour renforcer rapidement les compétences.
+                Un environnement pédagogique immersif avec de nombreux projets en groupe favorisant la coopération et l'entraide.
+              </p>
+            </div>
 
-          <div className="grid grid-3 mt-lg">
-            {[
-              { icon: <Code className="icon-xl icon-blue" />, title: "Rush 1-7", desc: "Formes ASCII" },
-              { icon: <Database className="icon-xl icon-purple" />, title: "Rush 2-7", desc: "Fréquences" },
-              { icon: <Terminal className="icon-xl icon-green" />, title: "My_printf", desc: "Projet final" }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="tile hover-zoom rotate-none animate-slideInUp"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <div className="tile-icon">{item.icon}</div>
-                <h3 className="tile-title">{item.title}</h3>
-                <p className="text-faint">{item.desc}</p>
-              </div>
-            ))}
+            <div className="tiles-row">
+              {[
+                { icon: <Code className="tile-icon-svg" />, title: "Rush 1-7", desc: "Formes ASCII" },
+                { icon: <Database className="tile-icon-svg" />, title: "Rush 2-7", desc: "Fréquences" },
+                { icon: <Terminal className="tile-icon-svg" />, title: "My_printf", desc: "Projet final" }
+              ].map((item, idx) => (
+                <div key={idx} className="tile">
+                  <div className="tile-card">
+                    <div className="tile-icon">{item.icon}</div>
+                    <h3 className="tile-title">{item.title}</h3>
+                    <p className="tile-desc">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )
