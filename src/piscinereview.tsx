@@ -52,7 +52,7 @@ const PiscineReview = () => {
                 <CheckCircle className="icon-lg icon-green" />
                 <div>
                   <h3 className="card-heading text-green">Points forts</h3>
-                  <p className="text-muted">Gestion du temps réussie, projet rendu dans les délais</p>
+                  <p className="text-muted">Gestion du temps réussie, projet rendu dans les délais, travailler en autonomie tout en restant collectif</p>
                 </div>
               </div>
             </div>
