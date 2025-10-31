@@ -155,11 +155,10 @@ const PiscineReview = () => {
       title: "Architecture modulaire",
       content: (
         <div className="section animate-fadeIn">
-          <h2 className="section-title text-blue animate-slideInLeft">Organisation du code</h2>
-
-          <div className="grid grid-2">
-            <div>
-              <h3 className="section-subtitle text-purple animate-slideInUp">📁 Structure</h3>
+          <h2 className="section-title">Organisation du code</h2>
+          <div className="code-section">
+            <div className="code-column animate-slideInLeft">
+              <h3 className="code-column-title">📁 Structure</h3>
               {[
                 { file: "my_printf.c", desc: "Point d'entrée principal" },
                 { file: "my_putchar.c", desc: "Affichage caractères" },
@@ -168,17 +167,17 @@ const PiscineReview = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="list-item list-blue animate-slideInUp"
+                  className="file-item"
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
-                  <p className="code-label text-green">{item.file}</p>
-                  <p className="text-faint">{item.desc}</p>
+                  <p className="file-name">{item.file}</p>
+                  <p className="file-desc">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div>
-              <h3 className="section-subtitle text-purple animate-slideInUp">⚙️ Conversions</h3>
+            <div className="code-column animate-slideInRight">
+              <h3 className="code-column-title">⚙️ Conversions</h3>
               {[
                 { file: "my_dec_to_hex_lowercase.c", desc: "Conversion hexadécimal" },
                 { file: "my_dec_to_oct.c", desc: "Conversion octale" },
@@ -187,21 +186,18 @@ const PiscineReview = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="list-item list-purple animate-slideInUp"
+                  className="file-item"
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
-                  <p className="code-label text-yellow">{item.file}</p>
-                  <p className="text-faint">{item.desc}</p>
+                  <p className="file-name">{item.file}</p>
+                  <p className="file-desc">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="panel panel-green animate-scaleIn mt-md">
-            <p className="paragraph text-muted">
-              <span className="text-green bold">17 fichiers C</span> organisés en modules réutilisables +
-              <span className="text-blue bold"> Makefile</span> avec tests Criterion
-            </p>
+          <div className="summary-box animate-slideInUp">
+            <span>17 fichiers C</span> organisés en modules réutilisables + <span>Makefile</span> avec tests Criterion
           </div>
         </div>
       )

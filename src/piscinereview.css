@@ -427,3 +427,62 @@ body, .app-root {
   color: #60a5fa;
 }
 
+/* === ARCHITECTURE MODULAIRE === */
+.code-section {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.code-column {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.code-column-title {
+  font-size: 1.8rem;
+  color: #818cf8;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.file-item {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.file-item:hover {
+  transform: translateX(10px);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.file-name {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.1rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.file-desc {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.summary-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.2rem;
+}
+
